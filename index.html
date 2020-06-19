@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="sa.css">
+  <script src="sa.js"></script>
+</head>
+<body>
+	<h2 align="center" style="font-size:75px; text-shadow:2px 2px 8px black; letter-spacing: 6px;" >SYMPTOM ANALYZER</h2>
+	<div class="container">
+    <div class="row">
+        <div class="column" style="background-color:lightblue;">
+            <h4 align="center" style="color:black; text-shadow:1px 1px grey;">SELECT BODY SECTION</h4>
+        </div>
+        <div class="column" style="background-color:lightgreen;">
+            <h4 align="center" style="text-shadow: 1px 1px grey;">SELECT PART</h4>
+        </div>
+        <div class="column" style="background-color:lightblue;">
+            <h4 align="center" style="text-shadow: 1px 1px grey;">SELECT TYPE</h4>
+        </div>
+        <div class="column" style="background-color:lightgreen;">
+            <h4 align="center" style="text-shadow: 1px 1px grey;">POSSIBILTIES</h4>
+        </div>
+    </div>
+    <br>
+    <div class="row" align="center">
+        <div class="column" style="background-color:#bbb;height:300px;">
+        <form align="center">
+            <input type="button" onclick="func1()" value="UPPER BODY"><br><br>
+            <input type="button" onclick="func2()" value="MIDDLE BODY"><br><br>
+            <input type="button" onclick="func3()" value="LOWER BODY">
+        </form>
+        </div>
+        <div class="column" style="background-color:#aaa;height:300px;">
+        	<form id="cd" style="display: none;">
+            <input type="button"  onclick="func4()" value="EYES" id="1"><br><br>
+            <input type="button" value="FOREHEAD" onclick="func5()" id="2"><br><br>
+            <input type="button" value="NOSE" onclick="func6()" id="3"><br><br>
+            <input type="button" value="EARS" onclick="func7()" id="4"><br><br>  
+            <input type="button" value="FACE" onclick="func8()" id="5">  
+            </form>
+            <form id="ef" style="display: none;">
+            <input type="button" value="BACK" onclick="func9()" id="6"><br><br>
+            <input type="button" value="NECK" onclick="func10()" id="7"><br><br>
+            <input type="button" value="ABDOMEN" onclick="func11()" id="8"><br><br>
+            <input type="button" value="CHEST" onclick="func12()" id="9"><br><br>  
+            <input type="button" value="THROAT" onclick="func13()" id="10">  
+            </form>
+            <form id="gh" style="display: none;">
+            <input type="button" value="HIPS" onclick="func14()" id="11"><br><br>
+            <input type="button" value="KNEES" onclick="func15()" id="12"><br><br>
+            <input type="button" value="THIGHS" onclick="func16()" id="13"><br><br>
+            <input type="button" value="ANKLE" onclick="func17()" id="14"><br><br> 
+            </form>
+        </div>
+        <div class="column" style="background-color:#bbb;height:300px;" id="ak47">
+        	<div id="i" style="display:none">
+            <input type="button" value="EYE PAIN" onclick="func18()" id="15"><br><br>
+            <input type="button" value="RED EYES" onclick="func19()" id="16"><br><br>        
+            </div>
+            <div id="j" style="display: none;">
+            <input type="button" value="DIZZINES" onclick="func20()" id="17"><br><br>
+            <input type="button" value="HEADACHE" onclick="func21()" id="18"><br><br>        
+            </div>
+            <div id="k" style="display: none;">
+            <input type="button" value="BURNING NOSE" onclick="func22()" id="19"><br><br>
+            <input type="button" value="NOSE BLEED" onclick="func23()" id="20"><br><br>        
+            </div>
+            <div id="l" style="display: none;">
+            <input type="button" value="EARACHE" onclick="func24()" id="21"><br><br>
+            <input type="button" value="RINGING IN EAR" onclick="func25()" id="22"><br><br>        
+            </div>
+            <div id="m" style="display: none;">
+            <input type="button" value="BLACKHEAD" onclick="func26()" id="23"><br><br>
+            <input type="button" value="FACIAL SWELLING" onclick="func27()" id="24"><br><br>        
+            </div>
+            <div id="n" style="display: none;">
+            <input type="button" value="BACK PAIN" onclick="func28()" id="25"><br><br>
+            <input type="button" value="LIMITED MOBILITY OF THE BACK" onclick="func29()" id="26"><br><br>        
+            </div>
+            <div id="o" style="display: none;">
+            <input type="button" value="NECK PAIN" onclick="func30()" id="27"><br><br>
+            <input type="button" value="NECK STIFFNESS" onclick="func31()" id="28"><br><br>        
+            </div>
+            <div id="p" style="display: none;">
+            <input type="button" value="ABDOMINAL" onclick="func32()" id="29"><br><br>
+            <input type="button" value="NAUSEA" onclick="func33()" id="30"><br><br>        
+            </div>
+            <div id="q" style="display: none;">
+            <input type="button" value="FAST,DEEPEND BREATHING" onclick="func34()" id="31"><br><br>
+            <input type="button" value="COUGH" onclick="func35()" id="32"><br><br>        
+            </div>
+            <div id="r" style="display: none;">
+            <input type="button" value="SORE THROAT" onclick="func36()" id="33"><br><br>
+            <input type="button" value="PAIN IN SWALLOWING" onclick="func37()" id="34"><br><br>        
+            </div>
+            <div id="s" style="display: none;">
+            <input type="button" value="HIP PAIN" onclick="func38()" id="35"><br><br>        
+            </div>
+            <div id="t" style="display: none;">
+            <input type="button" value="KNEE PAIN" onclick="func39()" id="36"><br><br>
+            </div>
+            <div id="u" style="display: none;">
+            <input type="button" value="LEG CRAMP" onclick="func40()" id="37"><br><br>
+            <input type="button" value="LEG PAIN" onclick="func41()" id="38"><br><br>        
+            </div>
+            <div id="v" style="display: none;">
+            <input type="button" value="LIMITED MOBILITY OF ANKLE" onclick="func42()" id="39"><br><br>
+            <input type="button" value="ANKLE SWELLING" onclick="func43()" id="40"><br><br>        
+            </div>
+        </div>
+        <div class="column" style="background-color:#bbb;height:300px;">
+        	<div style="display: none;" id="41">
+        	<h4>CHEMICAL EYE BURN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>FOREIGN OBJECT IN THE EYE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="42">
+        	<h4>PINK EYE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>EYE ALLERGY</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="43">
+        	<h4>POSITIONAL VERTIGO</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>HYPER VENTILATION</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                </div>
+            </div>
+            <h4>LOW BLOOD PRESURE</h4>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="44">
+        	<h4>SICK HEADACHE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>COLD</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="46">
+        	<h4>HAY FEVER</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>FLU-RELATED RHINITIS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>DRY NASAL MUCOSA</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="47">
+        	<h4>NOSE BLEED</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>HIGH BLOOD PRESSURE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                </div>
+            </div>
+            <h4>HAY FEVER</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="48">
+        	<h4>MIDDLE YEAR INFECTION</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>INFLAMATION OF THE EXTERNAL EAR CANAL</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                </div>
+            </div>
+            <h4>EAR INJURY WITH FOREIGN BODY</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="49">
+        	<h4>AUDITORY VERTIGO</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>EXESSIVE NOISE EXPOSURE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="50">
+        	<h4>ACNE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                </div>
+            </div>
+        </div>
+        <div style="display: none;" id="51">
+        	<h4>HYPERSESINTIVITY REACTION</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>TOOTH ABSCESS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="52">
+        	<h4>BACK PAIN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>STRAIN, SPRAIN OR WEAKNESS OF THE MUSCLE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="53">
+        	<h4>STRAIN, SPRAIN OR WEAKNESS OF THE MUSCLE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>SLIPPED DISC</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="54">
+        	<h4>BAD SLEEPING HABITS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>NERVE ROOT IRRITATION OF THE CERVICAL SPINE</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="55">
+        	<h4>BAD SLEEPING HABITS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>COLD</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="56">
+        	<h4>BLOATED BELLY</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>STOMACH FLU</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="57">
+        	<h4>FOOD POISONING</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>STOMACH FLU</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="58">
+        	<h4>HYPERVENTILATION</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>EXSESSIVE FEELING FEAR</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="59">
+        	<h4>COLD</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>FLU</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="60">
+        	<h4>INFLAMMATION OF NOSE AND THROAT</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>COLD</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="61">
+        	<h4>INFLAMMATION OF THE TONSIL</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>GINGIVOSTOMATITIS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="62">
+        	<h4>JOINT INFECTION</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>HIP DISPLASIA</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="63">
+        	<h4>OBESITY</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>STRAIN & SPRAIN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="64">
+        	<h4>MUSCLE CRAMP</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>TWISTED VEINS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+            </div>
+            <h4>IMBALANCE OF BODY MINERALS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+            </div>
+            </div>
+             <div style="display: none;" id="65">
+        	<h4>STRAIN & SPRAIN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>MUSCLE CRAMP</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                </div>
+            </div>
+            <h4>MUSCLE SORENESS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+                </div>
+            </div>
+            </div>
+             <div style="display: none;" id="66">
+        	<h4>STRAIN AND SPRAIN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>INFLAMMATION OF JOINT</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                </div>
+            </div>
+            </div>
+            <div style="display: none;" id="67">
+        	<h4>SPRAIN</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                </div>
+            </div>
+            <h4>TWISTED VEINS</h4>
+        	<div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+            <br><br>
+            <div class="row" align="center" style="height: 50px;">
+                <div class="panel panel-warning" style="align-self: center;">
+                <div class="panel-body">
+                <input type="checkbox"><p style="color:black; font-size: 10px;">I understand that this website doesn't replace in any case a medical consultaion and therefore allows no diagnosis. I hereby agree with the <strong><u>Terms of use</u></strong> and the <strong><u>privacy policy</u></strong>.</p>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
