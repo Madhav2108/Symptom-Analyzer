@@ -1,0 +1,45 @@
+body{
+	background: #cc2b5e;
+    background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    color :white;
+    font-family: "Monospace", Lucida Console, serif;
+}
+* {
+  box-sizing: border-box;
+}
+input{
+	color:black;
+}
+.column {
+  box-shadow: 2px 4px 4px grey;
+  border-style: solid;
+  border-radius:3px;
+  border-color:lightgrey;
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: px;
+  border-radius: 3px;
+  color:black;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#ab{
+	color:black;
+}
+#cd{
+    color:black;
+    width: 125px;
+}
+#ef{
+    color:black;	
+    width: 125px;
+}
+#gh{
+	color:black;
+    width: 125px;
+}
